@@ -1,12 +1,90 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS D3</title>
+    <title>Electric Car Store</title>
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    
+    <div class="container">
+        <!-- Navigation Menu -->
+        <header class="navigation">
+            <div class="logo">Electric Cars</div>
+            <nav class="menu">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="hamburger">☰</div>
+        </header>
+
+        <!-- Search Filters -->
+        <aside class="filters">
+            <h2>Search Filters</h2>
+            <label for="brand">Brand:</label>
+            <select id="brand">
+                <option value="tesla">Tesla</option>
+                <option value="nissan">Nissan</option>
+                <option value="chevrolet">Chevrolet</option>
+            </select>
+
+            <label for="price">Price Range:</label>
+            <input type="range" id="price" min="20000" max="100000">
+        </aside>
+
+        <!-- Main Section -->
+        <main class="main">
+            <h1>Our Electric Cars</h1>
+            <div class="products">
+                <div class="product">
+                    <img src="assets/img/istockphoto-1386070484-612x612.jpg" alt="Car 1">
+                    <label for="car1">Car 1</label><hr>
+                    <button>Ver más</button>
+                </div>
+                <div class="product">
+                    <img src="assets/img/istockphoto-1386070484-612x612.jpg" alt="Car 1">
+                    <label for="car2">Car 2</label><hr>
+                    <button>Ver más</button>
+                </div>
+                <div class="product">
+                    <img src="assets/img/istockphoto-1386070484-612x612.jpg" alt="Car 1">
+                    <label for="car3">Car 3</label><hr>
+                    <button>Ver más</button>
+                </div>
+                <div class="product">
+                    <img src="assets/img/istockphoto-1386070484-612x612.jpg" alt="Car 1">
+                    <label for="car4">Car 4</label><hr>
+                    <button>Ver más</button>
+                </div>
+                <div class="product">
+                    <img src="assets/img/istockphoto-1386070484-612x612.jpg" alt="Car 1">
+                    <label for="car5">Car 5</label><hr>
+                    <button>Ver más</button>
+                </div>
+                <div class="product">
+                    <img src="assets/img/istockphoto-1386070484-612x612.jpg" alt="Car 1">
+                    <label for="car6">Car 6</label><hr>
+                    <button>Ver más</button>
+                </div>
+                <div class="product">
+                    <img src="assets/img/istockphoto-1386070484-612x612.jpg" alt="Car 1">
+                    <label for="car7">Car 7</label><hr>
+                    <button>Ver más</button>
+                </div>
+                <div class="product">
+                    <img src="assets/img/istockphoto-1386070484-612x612.jpg" alt="Car 1">
+                    <label for="car8">Car 8</label><hr>
+                    <button>Ver más</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Electric Car Store. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
