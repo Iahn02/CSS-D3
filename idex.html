@@ -10,28 +10,44 @@
     <div class="container">
         <!-- Navigation Menu -->
         <header class="navigation">
-            <div class="logo">Electric Cars</div>
-            <nav class="menu">
-                <a href="#">Home</a>
-                <a href="#">Shop</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
+            <nav>
+                <div class="hamburger">&#9776;</div>
+                <div class="menu">
+                </div>
             </nav>
-            <div class="hamburger">☰</div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar...">
+                <button onclick="filterProducts()">Buscar</button>
+            </div>
+            <script>
+                function filterProducts() {
+                    var input, filter, products, product, label, i, txtValue;
+                    input = document.getElementById('searchInput');
+                    filter = input.value.toUpperCase();
+                    products = document.getElementsByClassName('product');
+                    
+                    for (i = 0; i < products.length; i++) {
+                        product = products[i];
+                        label = product.getElementsByTagName("label")[0];
+                        txtValue = label.textContent || label.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            product.style.display = "";
+                        } else {
+                            product.style.display = "none";
+                        }
+                    }
+                }
+            </script>
+            </nav>
         </header>
 
         <!-- Search Filters -->
         <aside class="filters">
-            <h2>Search Filters</h2>
-            <label for="brand">Brand:</label>
-            <select id="brand">
-                <option value="tesla">Tesla</option>
-                <option value="nissan">Nissan</option>
-                <option value="chevrolet">Chevrolet</option>
-            </select>
-
-            <label for="price">Price Range:</label>
-            <input type="range" id="price" min="20000" max="100000">
+            <h2>Electric Cars</h2>
+            <span>Inicio</span><br>
+            <span>Catalogo</span><br> 
+            <span>Ofertas</span><br> 
+            <span>Contacto</span><br>
         </aside>
 
         <!-- Main Section -->
