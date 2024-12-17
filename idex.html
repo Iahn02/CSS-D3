@@ -1,106 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electric Car Store</title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Assets/styles.css">
+    <title>Mini Pokedex</title>
 </head>
 <body>
-    <div class="container">
-        <!-- Navigation Menu -->
-        <header class="navigation">
-            <nav>
-                <div class="hamburger">&#9776;</div>
-                <div class="menu">
-                </div>
-            </nav>
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Buscar...">
-                <button onclick="filterProducts()">Buscar</button>
+    <div class="grid-container">
+        <div class="menu">
+            <div class="menu-toggle">
+            <h1><img class="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/2052px-Pok%C3%A9_Ball_icon.svg.png" alt="Icono de Pokemon">Mini Pokedex</h1>
+                <button class="menu-toggle bg-danger" id="menu-toggle" toggle="false" target="menu-toggle"><span class="navbar-toggler-icon"></span></button>
             </div>
-            <script>
-                function filterProducts() {
-                    var input, filter, products, product, label, i, txtValue;
-                    input = document.getElementById('searchInput');
-                    filter = input.value.toUpperCase();
-                    products = document.getElementsByClassName('product');
-                    
-                    for (i = 0; i < products.length; i++) {
-                        product = products[i];
-                        label = product.getElementsByTagName("label")[0];
-                        txtValue = label.textContent || label.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            product.style.display = "";
-                        } else {
-                            product.style.display = "none";
-                        }
-                    }
-                }
-            </script>
-            </nav>
-        </header>
-
-        <!-- Search Filters -->
-        <aside class="filters">
-            <h2>Electric Cars</h2>
-            <span>Inicio</span><br>
-            <span>Catalogo</span><br> 
-            <span>Ofertas</span><br> 
-            <span>Contacto</span><br>
-        </aside>
-
-        <!-- Main Section -->
-        <main class="main">
-            <h1>Our Electric Cars</h1>
-            <div class="products">
-                <div class="product">
-                    <img src="assets/img/istockphoto-1386070484-612x612.jpg" alt="Car 1">
-                    <label for="car1">Car 1</label><hr>
-                    <button>Ver más</button>
-                </div>
-                <div class="product">
-                    <img src="assets/img/istockphoto-1386070484-612x612.jpg" alt="Car 1">
-                    <label for="car2">Car 2</label><hr>
-                    <button>Ver más</button>
-                </div>
-                <div class="product">
-                    <img src="assets/img/istockphoto-1386070484-612x612.jpg" alt="Car 1">
-                    <label for="car3">Car 3</label><hr>
-                    <button>Ver más</button>
-                </div>
-                <div class="product">
-                    <img src="assets/img/istockphoto-1386070484-612x612.jpg" alt="Car 1">
-                    <label for="car4">Car 4</label><hr>
-                    <button>Ver más</button>
-                </div>
-                <div class="product">
-                    <img src="assets/img/istockphoto-1386070484-612x612.jpg" alt="Car 1">
-                    <label for="car5">Car 5</label><hr>
-                    <button>Ver más</button>
-                </div>
-                <div class="product">
-                    <img src="assets/img/istockphoto-1386070484-612x612.jpg" alt="Car 1">
-                    <label for="car6">Car 6</label><hr>
-                    <button>Ver más</button>
-                </div>
-                <div class="product">
-                    <img src="assets/img/istockphoto-1386070484-612x612.jpg" alt="Car 1">
-                    <label for="car7">Car 7</label><hr>
-                    <button>Ver más</button>
-                </div>
-                <div class="product">
-                    <img src="assets/img/istockphoto-1386070484-612x612.jpg" alt="Car 1">
-                    <label for="car8">Car 8</label><hr>
-                    <button>Ver más</button>
-                </div>
+            <ul class="menu-list">
+                <span>Tipo</span>
+                <li>Planta</li>
+                <li>Fuego</li>
+                <li>Agua</li> 
+                <li>Insecto</li>
+            </ul>
+        </div>
+        <div class="menu-footer">
+            <p>Todos los derechos reservados</p>
+        </div>
+        <div class="main">
+            <div class="filtro">
+                <input type="text" placeholder="Buscar Pokemon">
             </div>
-        </main>
+            <main>
+                <article>
+                    <div class="product-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
+                    </div>
+                    <span>#1</span>
+                    <h2>Bulbasaur</h2>
+                    <span>Tipo: Planta</span>
+                </article>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>&copy; 2024 Electric Car Store. All rights reserved.</p>
-        </footer>
+                <article>
+                    <div class="product-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="">
+                    </div>
+                    <span>#2</span>
+                    <h2>Ivysaur</h2>
+                    <span>Tipo: Planta</span>
+                </article>
+
+                <article>
+                    <div class="product-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" alt="">
+                    </div>
+                    <span>#3</span>
+                    <h2>Venusaur</h2>
+                    <span>Tipo: Planta</span>
+                </article>
+
+                <article>
+                    <div class="product-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="">
+                    </div>
+                    <span>#4</span>
+                    <h2>Charmander</h2>
+                    <span>Tipo: Fuego</span>
+                </article>
+                <article>
+                    <div class="product-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png" alt="">
+                    </div>
+                    <span>#5</span>
+                    <h2>Charmeleon</h2>
+                    <span>Tipo: Fuego</span>
+                </article>
+
+                <article>
+                    <div class="product-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" alt="">
+                    </div>
+                    <span>#6</span>
+                    <h2>Charizard</h2>
+                    <span>Tipo: Fuego</span>
+                </article>
+                <article>
+                    <div class="product-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="">
+                    </div>
+                    <span>#7</span>
+                    <h2>Squirtle</h2>
+                    <span>Tipo: Agua</span>
+                </article>
+                <article>
+                    <div class="product-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png" alt="">
+                    </div>
+                    <span>#8</span>
+                    <h2>Wartortle</h2>
+                    <span>Tipo: Agua</span>
+                </article>
+                <article>
+                    <div class="product-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png" alt="">
+                    </div>
+                    <span>#9</span>
+                    <h2>Blastoise</h2>
+                    <span>Tipo: Agua</span>
+                </article>
+                <article>
+                    <div class="product-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png" alt="">
+                    </div>
+                    <span>#10</span>
+                    <h2>Caterpie</h2>
+                    <span>Tipo: Insecto</span>
+                </article>
+                <article>
+                    <div class="product-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png" alt="">
+                    </div>
+                    <span>#11</span>
+                    <h2>Metapod</h2>
+                    <span>Tipo: Insecto</span>
+                </article>
+                <article>
+                    <div class="product-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png" alt="">
+                    </div>
+                    <span>#12</span>
+                    <h2>Butterfree</h2>
+                    <span>Tipo: Insecto</span>
+                </article>
+                <article>
+                    <div class="product-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png" alt="">
+                    </div>
+                    <span>#13</span>
+                    <h2>Weedle</h2>
+                    <span>Tipo: Insecto</span>
+                </article>
+                <article>
+                    <div class="product-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png" alt="">
+                    </div>
+                    <span>#14</span>
+                    <h2>Kakuna</h2>
+                    <span>Tipo: Insecto</span>
+                </article>
+                <article>
+                    <div class="product-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png" alt="">
+                    </div>
+                    <span>#15</span>
+                    <h2>Beedrill</h2>
+                    <span>Tipo: Insecto</span>
+                </article>
+            </main>
+        </div>
     </div>
+
 </body>
 </html>
