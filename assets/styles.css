@@ -6,10 +6,15 @@
 }
 
 @media (min-width: 1024px) {
+
+
     .grid-container {
         display: grid;
         grid-template-areas: "menu" "principal";
         grid-template-columns: 1fr 5fr;     
+    }
+    .color-menu {
+        background-color: #f08b51;
     }
     .menu {
         grid-area: menu;
@@ -23,6 +28,9 @@
         font-size: 1.8em;
         color: #fff;
     }
+    .d-flex {
+        background-color: #f08b51;
+    }
     .menu-header {
         display: flex;
         flex-direction: row;
@@ -30,7 +38,15 @@
         align-items: center;
         width: 100%;
         margin-top: 1rem;
-        border-bottom: 1px solid #fff;
+        background-color: #f08b51;
+    }
+    .menu-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: #f08b51;
     }
     .menu-img {
         margin-left: 1rem;
@@ -121,7 +137,13 @@
         height: 3rem;
         margin: 1rem;
     }
-    
+    .nav-li{
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 
@@ -243,6 +265,7 @@
         margin: 1rem;
     }
     .menu-toggle {
+        background-color: #f08b51;
     }
 
     .product-image img {
@@ -299,5 +322,23 @@
 @media (max-width: 480px) {
     .menuLaptop {
         display: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .menuLaptop {
+        display: flex;
+    }
+    .menu-img{
+        margin-top: 2rem;
+        width: 3rem;
+        height: 3rem;
+        margin: 1rem;
+    }
+    .RRSS img{
+        margin-top: 2rem;
+        width: 3rem;
+        height: 3rem;
+        margin: 1rem;
     }
 }
